@@ -1,0 +1,46 @@
+/* จัดการระยะห่างพื้นฐาน */
+body {
+    font-family: 'Sarabun', sans-serif; /* เปลี่ยนฟอนต์ให้ดูทันสมัยขึ้น */
+    background-color: #f8f9fa;
+}
+
+/* ปรับแต่งส่วนหัวข้อ */
+h1 {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* --- ส่วนของ Gallery รูปภาพ --- */
+
+.row.g-4 .col-md-4 {
+    overflow: hidden; /* กันรูปล้นออกมาตอนขยาย */
+    border-radius: 10px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 250px;       /* กำหนดความสูงให้เท่ากันทุกรูป */
+    object-fit: cover;   /* ตัดสัดส่วนรูปให้พอดีกล่อง ไม่ให้รูปเบี้ยว */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มความนุ่มนวล */
+    cursor: pointer;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์มาชี้ (Hover) */
+.img-fluid:hover {
+    transform: scale(1.05); /* รูปขยายขึ้นเล็กน้อย */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* เพิ่มเงาให้ดูมีมิติ */
+    z-index: 1;
+}
+
+/* ตกแต่ง Footer เพิ่มเติม */
+footer {
+    border-top: 3px solid #007bff; /* เพิ่มเส้นขอบด้านบนสีฟ้า */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
