@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}ลงทะเบียน | Wasuthon Songsawatwong 68094957{% endblock %}
+
+{% block content %}
+
+<style>
+  .row:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+  }
+</style>
+
+<div class="position-relative mb-4">
+  <img src="https://picsum.photos/900/200" class="img-fluid w-100" alt="banner">
+  <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h1 class="display-4 fw-bold two-layer">ลงทะเบียนประชากร</h1>
+    <p class="lead two-layer">กรอกข้อมูลเพื่อบันทึกในระบบ</p>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header bg-primary text-white text-center">
+        <h4 class="mb-0">แบบฟอร์มบันทึกข้อมูลประชากร</h4>
+      </div>
+      <div class="card-body">
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="mb-3">
+            <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+            <div class="text-danger small">
+              {% for error in field.errors %}{{ error }}{% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-lg" style="background-color: rgb(5, 136, 1); color: white;">
+              {% if edit_mode %}บันทึกการแก้ไข{% else %}บันทึกข้อมูล{% endif %}</button>
+            <button type="reset" class="btn btn-lg"
+              style="background-color: rgb(177, 0, 0); color: white;">ล้างข้อมูล</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
