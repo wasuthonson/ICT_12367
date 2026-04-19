@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}หน้าแรก |  Wasuthon Songsawatwong 68094957{% endblock %}
+
+{% block content %}
+
+<div class="position-relative mb-4">
+  <img src="https://picsum.photos/900/200" class="img-fluid w-100" alt="banner">
+  <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h1 class="display-4 fw-bold mb-2 two-layer">ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367</h1>
+    <p class="lead mb-0 two-layer">การใช้กรอบงานสำหรับการพัฒนาเว็บแอปพลิเคชันเพื่อความมั่นคงปลอดภัย</p>
+  </div>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/250?random=1" class="card-img-top" alt="service1">
+      <div class="card-body">
+        <h5 class="card-title">หน้าแรก</h5>
+        <p class="card-text">เนื้อหาตัวอย่างสำหรับหน้าแรกของเว็บไซต์ พร้อมฟีเจอร์การบันทึกข้อมูลประชากร</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/250?random=2" class="card-img-top" alt="service2">
+      <div class="card-body">
+        <h5 class="card-title">บริการ</h5>
+        <p class="card-text">เนื้อหาตัวอย่างสำหรับส่วนบริการของเว็บไซต์ ด้วยเทคโนโลยี Django</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/250?random=3" class="card-img-top" alt="about">
+      <div class="card-body">
+        <h5 class="card-title">เกี่ยวกับเรา</h5>
+        <p class="card-text">ข้อมูลเกี่ยวกับผู้พัฒนาเว็บไซต์ Thanakorn Pranpanas 68082768</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mb-5">
+  <h2 class="mb-4">แสดงแผนที่ Google Map</h2>
+  <div class="ratio ratio-16x9">
+    <iframe
+      src="https://www.google.com/maps?q=Chiang%20Mai&output=embed"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+</div>
+
+{% endblock %}
